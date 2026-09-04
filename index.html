@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Un site vitrine elegant et contemporain.">
+  <title>RTI | Accueil</title>
+  <link rel="icon" type="image/jpeg" href="Images/RTI.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a class="brand" href="index.html" aria-label="RTI, accueil">
+        <img src="Images/RTI.jpg" alt="RTI - Racino Trading International" width="1034" height="351">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+        <span class="sr-only" data-i18n="menu">Ouvrir le menu</span>
+      </button>
+      <div class="nav-panel" id="main-menu">
+        <a href="#accueil" data-i18n="home">Accueil</a>
+        <a href="#vehicules" data-i18n="vehicles">Véhicules</a>
+        <a href="#pneumatiques" data-i18n="tires">Pneumatiques</a>
+        <a href="#logistique" data-i18n="logistics">Logistique</a>
+        <a href="#a-propos" data-i18n="about">À propos</a>
+        <a href="#faq" data-i18n="faq">FAQ</a>
+        <a href="#contact" data-i18n="contact">Contact</a>
+        <a class="phone-link" href="tel:+33766214681" aria-label="Appeler le +33 7 66 21 46 81"><span class="phone-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.6 3.5 9 3l2 4.5-2.1 1.7a12.2 12.2 0 0 0 5.9 5.9l1.7-2.1 4.5 2-.5 2.4a2 2 0 0 1-2.2 1.6A16.5 16.5 0 0 1 5 5.7a2 2 0 0 1 1.6-2.2Z"></path></svg></span>+33 7 66 21 46 81</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="accueil">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title"><span data-i18n="titleFirst">De l’Europe au monde,</span><span data-i18n="titleSecond">sans frontières</span></h1>
+        <p class="hero-services" data-i18n="heroServices">Véhicules • Pneumatiques • Logistique</p>
+      </div>
+    </section>
+
+    <section class="catalogue-section" id="vehicules" aria-labelledby="catalogue-title">
+      <div class="section-heading">
+        <p class="eyebrow">Catalogue</p>
+        <h2 id="catalogue-title">Véhicules disponibles</h2>
+        <p class="section-intro">Une sélection de véhicules et solutions de mobilité prêts à accompagner vos projets.</p>
+      </div>
+
+      <form class="catalogue-filters" id="vehicle-filters" aria-label="Filtrer le catalogue">
+        <div class="filters-heading"><span class="filter-mark" aria-hidden="true">&#9776;</span><strong>Filtres avancés</strong><button class="reset-button" type="reset">Réinitialiser</button></div>
+        <div class="filter-fields">
+          <label>Marque
+            <select name="brand">
+              <option value="">Toutes les marques</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Volvo">Volvo</option>
+              <option value="Renault">Renault</option>
+            </select>
+          </label>
+          <label>Modèle
+            <select name="model">
+              <option value="">Tous les modèles</option>
+              <option value="Sprinter">Sprinter</option>
+              <option value="Hilux">Hilux</option>
+              <option value="FH">FH</option>
+              <option value="Master">Master</option>
+            </select>
+          </label>
+          <label>État
+            <select name="condition">
+              <option value="">Neuf et occasion</option>
+              <option value="Neuf">Neuf</option>
+              <option value="Occasion">Occasion</option>
+            </select>
+          </label>
+          <label>Énergie
+            <select name="fuel">
+              <option value="">Toutes les énergies</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Hybride">Hybride</option>
+              <option value="Électrique">Électrique</option>
+            </select>
+          </label>
+          <label>Boîte de vitesses
+            <select name="gearbox">
+              <option value="">Toutes les boîtes</option>
+              <option value="Automatique">Automatique</option>
+              <option value="Manuelle">Manuelle</option>
+            </select>
+          </label>
+          <fieldset class="range-filter"><legend>Année</legend><div class="range-fields"><input name="yearMin" type="number" min="2018" max="2026" placeholder="Mini" aria-label="Année minimum"><span aria-hidden="true">—</span><input name="yearMax" type="number" min="2018" max="2026" placeholder="Maxi" aria-label="Année maximum"></div></fieldset>
+          <fieldset class="range-filter"><legend>Kilométrage</legend><div class="range-fields"><input name="mileageMin" type="number" min="0" step="1000" placeholder="Mini" aria-label="Kilométrage minimum"><span aria-hidden="true">—</span><input name="mileageMax" type="number" min="0" step="1000" placeholder="Maxi" aria-label="Kilométrage maximum"></div></fieldset>
+          <fieldset class="range-filter"><legend>Prix en dinars (DA)</legend><div class="range-fields"><input name="priceMin" type="number" min="0" step="1000" placeholder="Mini" aria-label="Prix minimum en dinars"><span aria-hidden="true">—</span><input name="priceMax" type="number" min="0" step="1000" placeholder="Maxi" aria-label="Prix maximum en dinars"></div></fieldset>
+        </div>
+        <div class="filter-summary" id="filter-summary" aria-live="polite">4 véhicules correspondants</div>
+      </form>
+
+      <div class="vehicle-grid" id="vehicle-grid">
+        <article class="vehicle-card" data-brand="Mercedes-Benz" data-model="Sprinter" data-condition="Neuf" data-fuel="Diesel" data-gearbox="Automatique" data-year="2025" data-mileage="0" data-price="48900">
+          <div class="vehicle-image"><img src="Images/Photoaccueil.jpg" alt="Mercedes-Benz Sprinter blanc" loading="lazy"></div>
+          <div class="vehicle-card-body"><div class="vehicle-meta"><span>Neuf</span><span>2025</span></div><h3>Mercedes-Benz Sprinter</h3><dl><div><dt>Kilométrage</dt><dd>0 km</dd></div><div><dt>Énergie</dt><dd>Diesel</dd></div><div><dt>Boîte</dt><dd>Automatique</dd></div></dl><strong class="vehicle-price">48 900 €</strong></div>
+        </article>
+        <article class="vehicle-card" data-brand="Toyota" data-model="Hilux" data-condition="Occasion" data-fuel="Diesel" data-gearbox="Manuelle" data-year="2022" data-mileage="42000" data-price="32900">
+          <div class="vehicle-image"><img src="Images/Photoaccueil.jpg" alt="Toyota Hilux bleu" loading="lazy"></div>
+          <div class="vehicle-card-body"><div class="vehicle-meta"><span>Occasion</span><span>2022</span></div><h3>Toyota Hilux</h3><dl><div><dt>Kilométrage</dt><dd>42 000 km</dd></div><div><dt>Énergie</dt><dd>Diesel</dd></div><div><dt>Boîte</dt><dd>Manuelle</dd></div></dl><strong class="vehicle-price">32 900 €</strong></div>
+        </article>
+        <article class="vehicle-card" data-brand="Volvo" data-model="FH" data-condition="Occasion" data-fuel="Diesel" data-gearbox="Automatique" data-year="2021" data-mileage="86000" data-price="57900">
+          <div class="vehicle-image"><img src="Images/Photoaccueil.jpg" alt="Camion Volvo FH rouge" loading="lazy"></div>
+          <div class="vehicle-card-body"><div class="vehicle-meta"><span>Occasion</span><span>2021</span></div><h3>Volvo FH</h3><dl><div><dt>Kilométrage</dt><dd>86 000 km</dd></div><div><dt>Énergie</dt><dd>Diesel</dd></div><div><dt>Boîte</dt><dd>Automatique</dd></div></dl><strong class="vehicle-price">57 900 €</strong></div>
+        </article>
+        <article class="vehicle-card" data-brand="Renault" data-model="Master" data-condition="Neuf" data-fuel="Électrique" data-gearbox="Automatique" data-year="2026" data-mileage="0" data-price="41900">
+          <div class="vehicle-image"><img src="Images/Photoaccueil.jpg" alt="Renault Master utilitaire blanc" loading="lazy"></div>
+          <div class="vehicle-card-body"><div class="vehicle-meta"><span>Neuf</span><span>2026</span></div><h3>Renault Master</h3><dl><div><dt>Kilométrage</dt><dd>0 km</dd></div><div><dt>Énergie</dt><dd>Électrique</dd></div><div><dt>Boîte</dt><dd>Automatique</dd></div></dl><strong class="vehicle-price">41 900 €</strong></div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Aucun véhicule ne correspond à ces critères.</p>
+      <div class="catalogue-cta" aria-labelledby="catalogue-cta-title">
+        <div class="catalogue-cta-content">
+          <div>
+            <p class="eyebrow">Un besoin précis ?</p>
+            <h2 id="catalogue-cta-title">Vous recherchez un véhicule spécifique ?</h2>
+            <p>Notre équipe vous accompagne dans la recherche de la solution adaptée à vos besoins.</p>
+          </div>
+          <a class="cta-link" href="#contact">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-section" id="a-propos" aria-labelledby="approach-title">
+      <div class="section-heading approach-heading">
+        <p class="eyebrow">Notre méthode</p>
+        <h2 id="approach-title">Notre approche</h2>
+        <p>Un accompagnement clair, de la première conversation jusqu'à la livraison.</p>
+      </div>
+      <div class="approach-grid">
+        <article class="approach-card">
+          <div class="approach-card-top"><span class="approach-number">01</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v7a2.5 2.5 0 0 1-2.5 2.5H12l-4.5 4v-4h-1A2.5 2.5 0 0 1 4 12.5v-7Z"></path><path d="M8 8h8M8 11h5"></path></svg></div>
+          <h3>Échange</h3>
+          <p class="approach-lead">Parlons de votre besoin.</p>
+          <p>Le client peut nous contacter par téléphone, WhatsApp ou via le formulaire en ligne. Notre équipe recueille les informations nécessaires afin de comprendre précisément sa recherche, son budget et ses contraintes.</p>
+        </article>
+        <article class="approach-card">
+          <div class="approach-card-top"><span class="approach-number">02</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5M10.5 7v3.5L13 12"></path></svg></div>
+          <h3>Recherche</h3>
+          <p class="approach-lead">Nous identifions la solution adaptée.</p>
+          <p>Qu’il s’agisse d’un véhicule, de pneumatiques ou d’une solution liée à nos activités, nous recherchons les produits correspondant au besoin du client auprès de notre réseau de partenaires et de fournisseurs.</p>
+        </article>
+        <article class="approach-card">
+          <div class="approach-card-top"><span class="approach-number">03</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10v17H7zM9.5 7h5M9.5 10h5M9.5 13h3"></path><path d="m15 17 1.5 1.5L19 16"></path></svg></div>
+          <h3>Vérification &amp; organisation</h3>
+          <p class="approach-lead">Nous sécurisons chaque étape de l’opération.</p>
+          <p>Selon la nature du produit et de la transaction, nous vérifions les éléments nécessaires, préparons les documents et organisons les différentes étapes de la transaction, du contrôle jusqu’à l’acheminement.</p>
+        </article>
+        <article class="approach-card">
+          <div class="approach-card-top"><span class="approach-number">04</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v11H3zM14 10h3l4 4v3h-7zM6.5 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17.5 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path></svg></div>
+          <h3>Livraison</h3>
+          <p class="approach-lead">Votre commande arrive à destination.</p>
+          <p>Nous coordonnons la remise du véhicule ou du produit ainsi que les documents associés, avec une information claire sur les conditions et les coûts de l’opération.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="catalogue-cta transition-banner" aria-labelledby="transition-title">
+    <div class="catalogue-cta-content">
+      <div>
+        <h2 id="transition-title">De l’Europe au monde, vos projets prennent la route.</h2>
+        <p>Véhicules, pneumatiques et solutions logistiques, avec un accompagnement de bout en bout.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="delivery-section" aria-labelledby="delivery-title">
+    <div class="section-heading delivery-heading">
+      <p class="eyebrow">Nos implantations</p>
+      <h2 id="delivery-title">Points de livraison</h2>
+      <p>Deux adresses pour organiser la réception de vos véhicules et produits.</p>
+    </div>
+    <div class="delivery-grid">
+      <article class="delivery-card">
+        <span class="delivery-index">01</span>
+        <h3>Cachan</h3>
+        <address>18 rue Cousté<br>94130 Cachan<br>France</address>
+      </article>
+      <article class="delivery-card">
+        <span class="delivery-index">02</span>
+        <h3>Lyon</h3>
+        <address>Rue Rémy Cachet<br>69120 Vaulx-en-Velin<br>France</address>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact-form" aria-labelledby="contact-title">
+    <div class="contact-intro">
+      <p class="eyebrow">Contact · Réponse sous 24h</p>
+      <h2 id="contact-title">Contactez-nous.</h2>
+      <p>Un besoin, un projet, une solution : notre équipe vous accompagne.</p>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-details">
+        <div class="contact-detail"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3l2 4.5-2.1 1.7a12.2 12.2 0 0 0 5.9 5.9l1.7-2.1 4.5 2-.5 2.4a2 2 0 0 1-2.2 1.6A16.5 16.5 0 0 1 5 5.7a2 2 0 0 1 1.6-2.2Z"></path></svg></span><div><strong>Téléphone</strong><a href="tel:+33766214681">+33 7 66 21 46 81</a></div></div>
+        <div class="contact-detail"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="m4 7 8 6 8-6"></path></svg></span><div><strong>E-mail</strong><a href="mailto:contact@rti.fr">contact@rti.fr</a></div></div>
+        <div class="contact-detail"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.2"></circle></svg></span><div><strong>Adresse</strong><span>18 rue Cousté, 94130 Cachan, France<br>Rue Rémy Cachet, 69120 Vaulx-en-Velin, France</span></div></div>
+        <div class="contact-detail"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path></svg></span><div><strong>Horaires d’ouverture</strong><span>Lundi – Vendredi : 8h30 – 17h30<br>Samedi : 9h00 – 13h00</span></div></div>
+        <div class="contact-actions"><a class="contact-whatsapp" href="https://wa.me/33766214681">WhatsApp Direct</a><a class="contact-call" href="tel:+33766214681">Appeler de suite</a></div>
+      </div>
+      <form class="project-form" id="project-form">
+        <h3>Votre projet</h3>
+        <p>Complétez ce formulaire et décrivez le véhicule recherché.</p>
+        <div class="form-row"><label>Nom<input name="lastName" type="text" placeholder="Votre nom" required></label><label>Prénom<input name="firstName" type="text" placeholder="Votre prénom" required></label></div>
+        <label>Adresse e-mail<input name="email" type="email" placeholder="contact@exemple.fr" required></label>
+        <label>Téléphone<input name="phone" type="tel" placeholder="+33 7 66 21 46 81"></label>
+        <label>Votre message / modèle recherché<textarea name="message" rows="4" placeholder="Décrivez votre besoin (marque, motorisation, budget, neuf ou occasion...)" required></textarea></label>
+        <button type="submit">Envoyer ma demande <span aria-hidden="true">→</span></button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq" aria-labelledby="faq-title">
+    <div class="section-heading faq-heading">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2 id="faq-title">FAQ</h2>
+      <p>Les premières réponses aux questions que vous pouvez vous poser avant votre projet.</p>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Quels types de véhicules proposez-vous ?</summary><p>Nous proposons des véhicules neufs et d’occasion, selon vos besoins et votre budget.</p></details>
+      <details><summary>Peut-on rechercher un modèle précis ?</summary><p>Oui, notre équipe recherche le modèle, la marque et la configuration correspondant à votre demande.</p></details>
+      <details><summary>Proposez-vous des véhicules professionnels ?</summary><p>Oui, nous pouvons rechercher des utilitaires, poids lourds et véhicules adaptés aux activités professionnelles.</p></details>
+      <details><summary>Vendez-vous des pneumatiques ?</summary><p>Oui, nous recherchons des pneumatiques adaptés aux véhicules particuliers, professionnels et industriels.</p></details>
+      <details><summary>Dans quels pays livrez-vous ?</summary><p>Nous étudions les possibilités de livraison en France et à l’international selon le produit et la destination.</p></details>
+      <details><summary>Quels sont les délais de livraison ?</summary><p>Le délai dépend du véhicule ou du produit, de sa disponibilité et de la destination. Il est communiqué au moment de l’offre.</p></details>
+      <details><summary>Comment demander un devis ?</summary><p>Vous pouvez nous contacter par téléphone, WhatsApp ou via le formulaire de contact en précisant votre besoin.</p></details>
+      <details><summary>Quels documents sont nécessaires ?</summary><p>Les documents varient selon la nature de la transaction. Notre équipe vous indique les éléments à fournir à chaque étape.</p></details>
+      <details><summary>Comment se déroule le paiement ?</summary><p>Les conditions de paiement sont précisées dans l’offre et validées avant le lancement de l’opération.</p></details>
+      <details><summary>Les véhicules sont-ils vérifiés avant livraison ?</summary><p>Nous organisons les vérifications et contrôles nécessaires selon la nature du véhicule et de la transaction.</p></details>
+      <details><summary>Où sont situés vos points de livraison ?</summary><p>Nos points de livraison sont situés à Cachan et à Vaulx-en-Velin, près de Lyon.</p></details>
+      <details><summary>Comment suivre l’avancement de ma demande ?</summary><p>Notre équipe vous tient informé des étapes importantes, de la recherche jusqu’à la livraison.</p></details>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="Images/RTI.jpg" alt="RTI - Racino Trading International" width="1034" height="351">
+        <p>Votre partenaire spécialisé dans la distribution de véhicules, les pneumatiques et les solutions logistiques.</p>
+        <div class="group-logo-badge"><span>Filiale de</span><img class="group-logo" src="Images/Logo_Racino_Group_Bleu-removebg-preview.png" alt="Racino Group" width="900" height="260"></div>
+        <div class="social-links" aria-label="Réseaux sociaux">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://wa.me/33766214681" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <nav class="footer-column" aria-label="Navigation secondaire">
+        <p class="footer-label">Navigation</p>
+        <a href="#accueil" data-i18n="home">Accueil</a>
+        <a href="#vehicules" data-i18n="vehicles">Véhicules</a>
+        <a href="#pneumatiques" data-i18n="tires">Pneumatiques</a>
+        <a href="#logistique" data-i18n="logistics">Logistique</a>
+        <a href="#a-propos" data-i18n="about">À propos</a>
+        <a href="#faq" data-i18n="faq">FAQ</a>
+        <a href="#contact" data-i18n="contact">Contact</a>
+      </nav>
+      <div class="footer-column">
+        <p class="footer-label">Contact</p>
+        <a class="footer-contact-item" href="tel:+33766214681"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3l2 4.5-2.1 1.7a12.2 12.2 0 0 0 5.9 5.9l1.7-2.1 4.5 2-.5 2.4a2 2 0 0 1-2.2 1.6A16.5 16.5 0 0 1 5 5.7a2 2 0 0 1 1.6-2.2Z"></path></svg><span>+33 7 66 21 46 81</span></a>
+        <a class="footer-contact-item" href="mailto:contact@rti.fr"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="m4 7 8 6 8-6"></path></svg><span>contact@rti.fr</span></a>
+        <address class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.2"></circle></svg><span>Cachan<br>18 rue Cousté<br>94130 Cachan, France</span></address>
+        <address class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.2"></circle></svg><span>Lyon<br>Rue Rémy Cachet<br>69120 Vaulx-en-Velin, France</span></address>
+      </div>
+      <div class="footer-column">
+        <p class="footer-label">Horaires</p>
+        <p class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path></svg><span><strong>Lundi – Vendredi</strong><br>8h30 – 17h30</span></p>
+        <p class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path></svg><span><strong>Samedi</strong><br>9h00 – 13h00</span></p>
+      </div>
+      <div class="footer-column">
+        <p class="footer-label">Liens réglementaires</p>
+        <a href="admin.html">Administration</a>
+        <a href="#mentions-legales">Mentions légales</a>
+        <a href="#confidentialite">Politique de confidentialité</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Racino Trading International – Groupe Racino. Tous droits réservés.</span>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/33766214681" aria-label="Contacter RTI sur WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
