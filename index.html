@@ -22,8 +22,8 @@
       <div class="nav-panel" id="main-menu">
         <a href="#accueil" data-i18n="home">Accueil</a>
         <a href="#vehicules" data-i18n="vehicles">Véhicules</a>
-        <a href="#vehicules" data-i18n="tires">Pneumatiques</a>
-        <a href="#vehicules" data-i18n="logistics">Logistique</a>
+        <a href="#pneumatiques" data-i18n="tires">Pneumatiques</a>
+        <a href="#logistique" data-i18n="logistics">Logistique</a>
         <a href="#a-propos" data-i18n="about">À propos</a>
         <a href="#faq" data-i18n="faq">FAQ</a>
         <a href="#contact" data-i18n="contact">Contact</a>
@@ -35,7 +35,7 @@
   <main id="accueil">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1 id="hero-title"><span data-i18n="titleFirst">De l’Europe au monde,</span><span data-i18n="titleSecond">sans frontières</span></h1>
+        <h1 id="hero-title"><span data-i18n="titleFirst">De l’Europe au monde,</span><span class="title-accent" data-i18n="titleSecond">sans frontières</span></h1>
         <p class="hero-services" data-i18n="heroServices">Véhicules • Pneumatiques • Logistique</p>
       </div>
     </section>
@@ -57,7 +57,7 @@
     <section class="catalogue-section" id="vehicules" aria-labelledby="catalogue-title">
       <div class="section-heading">
         <p class="eyebrow">Catalogue</p>
-        <h2 id="catalogue-title">Véhicules disponibles</h2>
+        <h2 id="catalogue-title">Véhicules <span class="title-accent">disponibles</span></h2>
         <p class="section-intro">Une sélection de véhicules et solutions de mobilité prêts à accompagner vos projets.</p>
       </div>
 
@@ -134,7 +134,7 @@
         <div class="catalogue-cta-content">
           <div>
             <p class="eyebrow">Un besoin précis ?</p>
-            <h2 id="catalogue-cta-title">Vous recherchez un véhicule spécifique ?</h2>
+            <h2 id="catalogue-cta-title">Vous recherchez un véhicule <span class="title-accent">spécifique ?</span></h2>
             <p>Notre équipe vous accompagne dans la recherche de la solution adaptée à vos besoins.</p>
           </div>
           <a class="cta-link" href="#contact">Demander un devis</a>
@@ -142,10 +142,87 @@
       </div>
     </section>
 
+    <section class="pneumatics-section" id="pneumatiques" aria-labelledby="pneumatics-title">
+      <div class="section-heading pneumatics-intro">
+        <p class="eyebrow">Pneumatiques</p>
+        <h2 id="pneumatics-title">Des solutions pneumatiques <span class="title-accent">pour tous les usages</span></h2>
+        <p>Du véhicule particulier au véhicule militaire, en passant par les poids lourds et les applications spécialisées, nous proposons des solutions pneumatiques adaptées à chaque véhicule, chaque environnement et chaque exigence.</p>
+      </div>
+
+      <div class="pneumatics-block applications-block" aria-labelledby="applications-title">
+        <div class="pneumatics-block-heading">
+          <p class="eyebrow">Une expertise multi-applications</p>
+          <h3 id="applications-title">Une solution pour chaque <span class="title-accent">terrain</span></h3>
+        </div>
+        <div class="application-grid">
+          <article class="application-card"><span>01</span><h4>Véhicules particuliers</h4><p>Des références adaptées au quotidien, aux longs trajets et aux différents niveaux d’exigence.</p></article>
+          <article class="application-card"><span>02</span><h4>Véhicules utilitaires</h4><p>Des solutions pensées pour la charge, la régularité d’utilisation et la robustesse.</p></article>
+          <article class="application-card"><span>03</span><h4>Poids lourds</h4><p>Des pneumatiques sélectionnés selon le tonnage, la distance et les conditions d’exploitation.</p></article>
+          <article class="application-card"><span>04</span><h4>Véhicules militaires</h4><p>Une recherche orientée vers les contraintes spécifiques des véhicules et environnements exigeants.</p></article>
+          <article class="application-card"><span>05</span><h4>Applications spécialisées</h4><p>Une étude au cas par cas pour les usages techniques, industriels ou hors normes.</p></article>
+        </div>
+      </div>
+
+      <div class="pneumatics-partner" aria-labelledby="partner-title">
+        <div class="partner-visual"><img src="Images/Michelin.jpg" alt="Pneumatiques Michelin" loading="lazy"></div>
+        <div class="partner-content">
+          <img class="partner-logo" src="Images/michelin.svg" alt="Michelin" width="113" height="48">
+          <p class="eyebrow">Partenariat Michelin</p>
+          <h3 id="partner-title">Une marque de référence <span class="title-accent">pour vos besoins pneumatiques</span></h3>
+          <p>Notre partenariat avec Michelin nous permet de vous orienter vers des solutions reconnues, adaptées à votre véhicule, à votre charge et à votre utilisation.</p>
+        </div>
+      </div>
+
+      <div class="catalogue-cta pneumatics-cta" aria-labelledby="pneumatics-cta-title">
+        <div class="catalogue-cta-content">
+          <div>
+          <p class="eyebrow">Un besoin spécifique ?</p>
+          <h2 id="pneumatics-cta-title">Besoin d’un pneumatique <span class="title-accent">spécifique ?</span></h2>
+          <p>Décrivez-nous votre véhicule, votre usage et vos contraintes. Nous rechercherons la solution adaptée.</p>
+          </div>
+          <a class="cta-link" href="#contact">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="logistics-section" id="logistique" aria-labelledby="logistics-title">
+      <div class="section-heading logistics-intro">
+        <p class="eyebrow">Transport &amp; logistique</p>
+        <h2 id="logistics-title">Des solutions de transport <span class="title-accent">adaptées à vos besoins</span></h2>
+        <p>Du transport routier léger de marchandises à la livraison et à la distribution, nous organisons et assurons l’acheminement de vos marchandises au moyen de véhicules jusqu’à 3,5 tonnes. Nous proposons des solutions adaptées à vos contraintes, de la prise en charge à la livraison, avec une attention particulière portée à la fiabilité, à la réactivité et au respect des délais.</p>
+      </div>
+
+      <div class="logistics-services" aria-labelledby="services-title">
+        <div class="logistics-services-heading">
+          <p class="eyebrow">Notre offre</p>
+          <h3 id="services-title">Nos <span class="title-accent">services</span></h3>
+        </div>
+        <ul class="logistics-service-list">
+          <li><span>01</span>Transport routier léger de marchandises</li>
+          <li><span>02</span>Livraison et distribution</li>
+          <li><span>03</span>Organisation des opérations de transport</li>
+          <li><span>04</span>Acheminement et suivi des marchandises</li>
+          <li><span>05</span>Prestations logistiques et opérations accessoires</li>
+          <li><span>06</span>Solutions adaptées aux besoins spécifiques de chaque client</li>
+        </ul>
+      </div>
+
+      <div class="catalogue-cta logistics-cta" aria-labelledby="logistics-cta-title">
+        <div class="catalogue-cta-content">
+          <div>
+            <p class="eyebrow">Un besoin logistique ?</p>
+            <h2 id="logistics-cta-title">Organisons <span class="title-accent">votre transport.</span></h2>
+            <p>Parlez-nous de vos marchandises, de vos contraintes et de votre destination.</p>
+          </div>
+          <a class="cta-link" href="#contact">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
     <section class="approach-section" id="a-propos" aria-labelledby="approach-title">
       <div class="section-heading approach-heading">
         <p class="eyebrow">Notre méthode</p>
-        <h2 id="approach-title">Notre approche</h2>
+        <h2 id="approach-title">Notre <span class="title-accent">approche</span></h2>
         <p>Un accompagnement clair, de la première conversation jusqu'à la livraison.</p>
       </div>
       <div class="approach-grid">
@@ -180,7 +257,7 @@
   <section class="catalogue-cta transition-banner" aria-labelledby="transition-title">
     <div class="catalogue-cta-content">
       <div>
-        <h2 id="transition-title">De l’Europe au monde, vos projets prennent la route.</h2>
+        <h2 id="transition-title">De l’Europe au monde, <span class="title-accent">vos projets prennent la route.</span></h2>
         <p>Véhicules, pneumatiques et solutions logistiques, avec un accompagnement de bout en bout.</p>
       </div>
     </div>
@@ -189,7 +266,7 @@
   <section class="delivery-section" aria-labelledby="delivery-title">
     <div class="section-heading delivery-heading">
       <p class="eyebrow">Nos implantations</p>
-      <h2 id="delivery-title">Points de livraison</h2>
+      <h2 id="delivery-title">Points de <span class="title-accent">livraison</span></h2>
       <p>Deux adresses pour organiser la réception de vos véhicules et produits.</p>
     </div>
     <div class="delivery-grid">
@@ -206,10 +283,16 @@
     </div>
   </section>
 
+  <section class="catalogue-cta activity-banner" aria-label="Notre activité">
+    <div class="catalogue-cta-content">
+      <h2>Véhicules, pneumatiques, transport et logistique : <span class="title-accent">une même exigence, du départ à la livraison.</span></h2>
+    </div>
+  </section>
+
     <section class="testimonials-section" aria-labelledby="testimonials-title">
       <div class="testimonials-heading">
         <p class="eyebrow">Témoignages</p>
-        <h2 id="testimonials-title">Ce que disent nos clients</h2>
+        <h2 id="testimonials-title">Ce que disent <span class="title-accent">nos clients</span></h2>
         <p>Ils nous font confiance, et leurs retours parlent d’eux-mêmes.</p>
       </div>
       <div class="testimonials-layout">
@@ -261,7 +344,7 @@
   <section class="contact-section" id="contact" aria-labelledby="contact-title">
     <div class="contact-intro">
       <p class="eyebrow">Contact · Réponse sous 24h</p>
-      <h2 id="contact-title">Contactez-nous.</h2>
+      <h2 id="contact-title">Contactez<span class="title-accent">-nous.</span></h2>
       <p>Un besoin, un projet, une solution : notre équipe vous accompagne.</p>
     </div>
     <div class="contact-layout">
@@ -325,8 +408,8 @@
         <p class="footer-label">Navigation</p>
         <a href="#accueil" data-i18n="home">Accueil</a>
         <a href="#vehicules" data-i18n="vehicles">Véhicules</a>
-        <a href="#vehicules" data-i18n="tires">Pneumatiques</a>
-        <a href="#vehicules" data-i18n="logistics">Logistique</a>
+        <a href="#pneumatiques" data-i18n="tires">Pneumatiques</a>
+        <a href="#logistique" data-i18n="logistics">Logistique</a>
         <a href="#a-propos" data-i18n="about">À propos</a>
         <a href="#faq" data-i18n="faq">FAQ</a>
         <a href="#contact" data-i18n="contact">Contact</a>
