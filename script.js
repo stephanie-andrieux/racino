@@ -27,6 +27,11 @@
   var filterSummary = document.querySelector('#filter-summary');
   var projectForm = document.querySelector('#project-form');
   var formStatus = document.querySelector('#form-status');
+  var testimonialTrack = document.querySelector('.testimonial-track');
+  var testimonialCards = document.querySelectorAll('.testimonial-card');
+  var testimonialDots = document.querySelector('.testimonial-dots');
+  var testimonialPrevious = document.querySelector('.testimonial-previous');
+  var testimonialNext = document.querySelector('.testimonial-next');
 
   function setLanguage(language) {
     document.documentElement.lang = language;
@@ -90,6 +95,49 @@
     formStatus.textContent = 'Merci, votre demande a bien été préparée. Notre équipe vous répondra rapidement.';
     projectForm.reset();
   });
+
+  var testimonialIndex = 0;
+  var testimonialTimer;
+
+  function showTestimonial(index) {
+    testimonialIndex = (index + testimonialCards.length) % testimonialCards.length;
+    testimonialTrack.style.transform = 'translateX(-' + (testimonialIndex * 100) + '%)';
+    testimonialCards.forEach(function (card, cardIndex) {
+      card.classList.toggle('is-active', cardIndex === testimonialIndex);
+    });
+    testimonialDots.querySelectorAll('button').forEach(function (dot, dotIndex) {
+      dot.classList.toggle('is-active', dotIndex === testimonialIndex);
+      dot.setAttribute('aria-current', dotIndex === testimonialIndex ? 'true' : 'false');
+    });
+  }
+
+  testimonialCards.forEach(function (card, cardIndex) {
+    var dot = document.createElement('button');
+    dot.className = 'testimonial-dot';
+    dot.type = 'button';
+    dot.setAttribute('aria-label', 'Afficher le témoignage ' + (cardIndex + 1));
+    dot.addEventListener('click', function () {
+      showTestimonial(cardIndex);
+      restartTestimonials();
+    });
+    testimonialDots.appendChild(dot);
+  });
+
+  function restartTestimonials() {
+    window.clearInterval(testimonialTimer);
+    testimonialTimer = window.setInterval(function () { showTestimonial(testimonialIndex + 1); }, 5000);
+  }
+
+  testimonialPrevious.addEventListener('click', function () {
+    showTestimonial(testimonialIndex - 1);
+    restartTestimonials();
+  });
+  testimonialNext.addEventListener('click', function () {
+    showTestimonial(testimonialIndex + 1);
+    restartTestimonials();
+  });
+  showTestimonial(0);
+  restartTestimonials();
 
   var savedLanguage = 'fr';
   try { savedLanguage = localStorage.getItem('new-site-language') || 'fr'; } catch (error) { /* private browsing */ }
