@@ -224,7 +224,7 @@ h2 { font-size: clamp(2.8rem, 6vw, 6rem); }
   .contact-layout { grid-template-columns: 1fr; gap: 40px; }
   .project-form { padding: 24px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
-  .testimonial-photo { display: none; }
+  .testimonial-photo { min-height: 280px; }
   .faq-list { grid-template-columns: 1fr; gap: 0; }
   .delivery-grid { grid-template-columns: 1fr; margin-top: 36px; }
   .approach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
