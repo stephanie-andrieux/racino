@@ -194,7 +194,7 @@ h2 { font-size: clamp(2.8rem, 6vw, 6rem); }
 .whatsapp-float i { flex: 0 0 auto; font-size: 1.45rem; line-height: 1; }
 
 @media (max-width: 760px) {
-  .site-header { position: static; }
+  .site-header { position: relative; }
   .site-nav { min-height: 72px; padding: 8px 20px; }
   .brand img { height: 50px; }
   .menu-toggle { display: grid; gap: 5px; width: 42px; height: 42px; place-content: center; border: 1px solid rgba(255, 253, 248, .35); background: transparent; cursor: pointer; }
@@ -207,17 +207,21 @@ h2 { font-size: clamp(2.8rem, 6vw, 6rem); }
   .nav-panel > a { padding: 13px 0; border-bottom: 1px solid rgba(255, 253, 248, .2); }
   .phone-link { margin: 14px 0 0; padding: 13px 0 0; border-top: 1px solid rgba(255, 253, 248, .2); }
   .language-switcher { margin: 14px 0 0; padding: 0; border: 0; }
-  .hero { min-height: 620px; padding: 80px 20px 34px; background-position: 58% center; }
+  .hero { min-height: 620px; padding: 80px 20px 34px; background-position: 58% center; background-size: cover; }
   .hero-content { width: 100%; margin: 0; transform: none; }
   h1 { font-size: clamp(1.3rem, 5.5vw, 2rem); }
   .approach-section, .delivery-section, .faq-section { padding: 64px 20px; }
   .testimonials-section { padding: 64px 20px; }
   .testimonials-layout { grid-template-columns: 1fr; gap: 28px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+  .project-form { padding: 24px 20px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
   .testimonial-photo { display: none; }
   .faq-list { grid-template-columns: 1fr; gap: 0; }
   .delivery-grid { grid-template-columns: 1fr; margin-top: 36px; }
   .approach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .catalogue-section { padding: 64px 20px 0; }
+  .catalogue-section > .catalogue-cta { width: calc(100% + 40px); margin-left: -20px; }
   .catalogue-cta { padding: 38px 0; }
   .catalogue-cta-content { align-items: flex-start; flex-direction: column; gap: 20px; padding: 0 20px; }
   .filter-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 16px; }
