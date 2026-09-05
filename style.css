@@ -30,7 +30,7 @@ a { color: inherit; text-decoration: none; }
 .language-button.active { color: var(--white); }
 .menu-toggle { display: none; }
 
-.hero { min-height: min(760px, calc(100vh - 82px)); display: flex; align-items: flex-end; max-width: none; margin: auto; padding: 110px 32px 46px; background-color: var(--ink); background-image: linear-gradient(180deg, rgba(17, 17, 17, .04) 32%, rgba(17, 17, 17, .16) 58%, rgba(17, 17, 17, .72) 100%), url('Images/Photoaccueil.jpg'); background-position: center; background-size: cover; color: var(--white); }
+.hero { min-height: min(760px, calc(100vh - 82px)); display: flex; align-items: flex-end; max-width: none; margin: auto; padding: 110px 32px 46px; background-color: var(--ink); background-image: linear-gradient(180deg, rgba(17, 17, 17, .04) 32%, rgba(17, 17, 17, .16) 58%, rgba(17, 17, 17, .72) 100%), url('Images/Photoaccueil.jpg'); background-position: center; background-size: 100% auto; background-repeat: no-repeat; color: var(--white); }
 .hero-content { width: min(1240px, 100%); margin: 0 0 0 clamp(180px, 18vw, 320px); transform: translateX(4cm); }
 .eyebrow, .footer-label { margin: 0 0 22px; color: var(--accent); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 h1, h2 { max-width: 820px; margin: 0; font-family: 'Oswald', sans-serif; font-weight: 700; line-height: .98; letter-spacing: 0; }
@@ -64,7 +64,7 @@ h2 { font-size: clamp(2.8rem, 6vw, 6rem); }
 .delivery-index { display: block; margin-bottom: 22px; color: rgba(17, 17, 17, .55); font-size: .9rem; font-weight: 700; }
 .delivery-card h3 { margin: 0 0 18px; font-size: 1.5rem; text-transform: uppercase; }
 .delivery-card address { color: rgba(17, 17, 17, .72); font-size: 1rem; font-style: normal; line-height: 1.65; }
-.contact-section { padding: 110px 32px 120px; background: var(--ink); color: var(--white); }
+.contact-section { position: relative; isolation: isolate; padding: 110px 32px 120px; background-color: var(--ink); background-image: linear-gradient(rgba(17, 17, 17, .7), rgba(17, 17, 17, .82)), url('Images/Contact.jpg'); background-position: center; background-size: cover; color: var(--white); }
 .contact-intro { max-width: 620px; margin: 0 auto 58px; text-align: center; }
 .contact-intro .eyebrow { color: rgba(255, 255, 255, .7); }
 .contact-intro h2 { font-size: clamp(1.4rem, 3vw, 2.5rem); text-transform: uppercase; }
@@ -88,11 +88,11 @@ h2 { font-size: clamp(2.8rem, 6vw, 6rem); }
 .project-form textarea { resize: vertical; }.project-form input:focus, .project-form textarea:focus { border-color: rgba(255, 255, 255, .55); }
 .project-form button { width: 100%; margin-top: 20px; padding: 12px 16px; border: 0; background: var(--white); color: var(--ink); cursor: pointer; font: inherit; font-size: .78rem; font-weight: 700; text-transform: uppercase; }
 .form-status { min-height: 18px; margin: 12px 0 0; color: rgba(255, 255, 255, .72); font-size: .78rem; }
-.faq-section { max-width: 1240px; margin: auto; padding: 88px 32px; }
+.faq-section { max-width: none; margin: auto; padding: 88px max(32px, calc((100vw - 1240px) / 2 + 32px)); background: var(--soft); }
 .faq-heading { max-width: 650px; }
 .faq-heading h2 { font-size: clamp(1.4rem, 3vw, 2.5rem); }
 .faq-heading > p:last-child { max-width: 520px; margin: 22px 0 0; color: rgba(17, 17, 17, .72); }
-.faq-list { max-width: 900px; margin: 46px auto 0; border-top: 1px solid var(--line); }
+.faq-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; max-width: 1100px; margin: 46px auto 0; border-top: 1px solid var(--line); }
 .faq-list details { border-bottom: 1px solid var(--line); }
 .faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0; cursor: pointer; font-size: 1rem; font-weight: 700; list-style: none; }
 .faq-list summary::-webkit-details-marker { display: none; }
@@ -188,6 +188,7 @@ h2 { font-size: clamp(2.8rem, 6vw, 6rem); }
   .hero-content { width: 100%; margin: 0; transform: none; }
   h1 { font-size: clamp(1.3rem, 5.5vw, 2rem); }
   .approach-section, .delivery-section, .faq-section { padding: 64px 20px; }
+  .faq-list { grid-template-columns: 1fr; gap: 0; }
   .delivery-grid { grid-template-columns: 1fr; margin-top: 36px; }
   .approach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .catalogue-section { padding: 64px 20px 0; }
